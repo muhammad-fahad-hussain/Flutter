@@ -445,14 +445,161 @@ Write a program to calculate time taken to reach office in minutes. Formula= (di
 
 // ========================================================
 // 32.	Write a function in Dart called createUser with parameters name, age, and isActive, where isActive has a default value of true.
-void main() {
-  var user1 = createUser("Muuhammad Fahad", 21, true);
-  print(user1);
+// void main() {
+//   var user1 = createUser("Muuhammad Fahad", 21, true);
+//   print(user1);
 
-  var user2 = createUser("Mehboob Waqar", 22);
-  print(user2);
-}
+//   var user2 = createUser("Mehboob Waqar", 22);
+//   print(user2);
+// }
 
-String createUser(String name, int age, [bool isActive = true]) {
-  return "Name: $name, Age: $age, IsActive: $isActive";
-}
+// String createUser(String name, int age, [bool isActive = true]) {
+//   return "Name: $name, Age: $age, IsActive: $isActive";
+// }
+
+// 33.	Write a function in Dart called calculateArea that calculates the area of a rectangle. It should take length and width as arguments, with a default value of 1 for both. Formula: length * width
+// .
+
+// void main() {
+//   double area1 = calculateArea(5, 3);
+//   print("Area 1: $area1");
+//   double area2 = calculateArea(5);
+//   print("Area 2: $area2");
+// }
+
+// double calculateArea(double length, [double width = 1]) {
+//   return length * width;
+// }
+
+// 34.	Create a list of names and print all names using list.
+
+// void main() {
+//   List list = ['Muhammad Fahad', "Mehboob Waqar", "Muhammad Jahanzaib"];
+//   list.forEach((element) {
+//     print(element);
+//   });
+// }
+
+// =============================================
+// 35.	Create a set of fruits and print all fruits using loop.
+
+// void main() {
+//   Set fruits = {"Apple", "Banana", "Orange", "Mango", "Grapes"};
+//   for (String i in fruits) {
+//     print("Fruit = $i");
+//   }
+// }
+
+// ================================================
+// 36.	Create a program thats reads list of expenses amount using user input and print total.
+// import 'dart:io';
+
+// void main() {
+//   List expenses = [];
+//   double total = 0.0;
+
+//   while (true) {
+//     stdout.write("Enter expense amount (or 'done' to finish): ");
+//     String input = stdin.readLineSync()!;
+//     if (input.toLowerCase() == 'done') {
+//       break;
+//     }
+//     try {
+//       double expense = double.parse(input);
+//       expenses.add(expense);
+//       total += expense;
+//     } catch (e) {
+//       print("Invalid input. Please enter a valid number or 'done' to finish.");
+//     }
+//   }
+
+//   print("\nTotal expenses: $total");
+// }
+// ================================================
+
+// 37.	Create an empty list of type string called days. Use the add method to add names of 7 days and print all days.
+// void main() {
+//   List days = [];
+
+//   days.add("Monday");
+//   days.add("Tuesday");
+//   days.add("Wednesday");
+//   days.add("Thursday");
+//   days.add("Friday");
+//   days.add("Saturday");
+//   days.add("Sunday");
+
+//   print("All days of the week:");
+//   for (var day in days) {
+//     print(day);
+//   }
+// }
+
+// ========================================================================
+
+// // 38.	Add your 7 friend names to the list. Use where to find a name that starts with alphabet a.
+// void main() {
+//   List friendNames = [
+//     "mehboob",
+//     "zaibi",
+//     "bilal",
+//     "asad",
+//     "waleed",
+//     "umar",
+//   ];
+
+//   var nameStartingWithA = friendNames.where((name) => name.startsWith('a'));
+
+//   if (nameStartingWithA.isNotEmpty) {
+//     print("Name starting with 'a': ${nameStartingWithA.first}");
+//   } else {
+//     print("No name starting with 'a' found.");
+//   }
+// }
+
+// ========================================================================
+// //
+// void main() {
+//   Map person = {
+//     'name': 'Muhammad Fahad',
+//     'address': 'Lahore',
+//     'age': 22,
+//     'country': 'Pakistan'
+//   };
+
+//   print("Original keys and values:");
+//   printMap(person);
+//   person['country'] = 'UAE';
+//   print("\nUpdated keys and values:");
+//   printMap(person);
+// }
+
+// void printMap(Map map) {
+//   map.forEach((key, value) {
+//     print("$key: $value");
+//   });
+// }
+
+// ========================================================================
+
+// 40.	Create a map with name, phone keys and store some values to it. Use where to find all keys that have length 4.
+// void main() {
+//   Map<String, String> contacts = {
+//     'Muhammad Fahad': '1234567890',
+//     'Mehboob Waqar': '9876543210',
+//     'Muhammad Jahanzaib': '4567890123',
+//     'Bilal': '3210987654',
+//     'Asad': '6543210987'
+//   };
+
+//   var keysWithLengthFour = contacts.keys.where((key) => key.length == 4);
+
+//   print("Keys with length 4:");
+//   keysWithLengthFour.forEach((key) => print(key));
+// }
+
+
+
+// ============================================================
+
+// 41.	Create a simple to-do application that allows user to add, remove, and view their task.
