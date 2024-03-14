@@ -274,11 +274,185 @@ Write a program to calculate time taken to reach office in minutes. Formula= (di
 // =========================================================================
 // 21.	Write a dart program to print 1 to 100 but not 41.
 
+// void main() {
+//   int no = 41;
+//   for (int i = 1; i <= 100; i++) {
+//     if (i != no) {
+//       print("$i \t");
+//     }
+//   }
+// }
+
+// 22.	Write a program in Dart to print your own name using function.
+
+// void main() {
+//   print("My name is ${name()}");
+// }
+
+// String name() {
+//   return "Muhammad Fahad";
+// }
+
+// ==========================================================
+
+// 23.	Write a program in Dart to print even numbers between intervals using function.
+
+// void main() {
+//   int start = 1;
+//   int end = 15;
+//   print("Even numbers between $start and $end:");
+//   printEven(start, end);
+// }
+
+// void printEven(int start, int end) {
+//   for (int i = start; i <= end; i++) {
+//     if (isEven(i)) {
+//       print(i);
+//     }
+//   }
+// }
+
+// bool isEven(int number) {
+//   return number % 2 == 0;
+// }
+
+// =============================================
+
+// 24.	Create a function called greet that takes a name as an argument and prints a greeting message.
+//For example, greet(“John”) should print “Hello, John”.
+// void main() {
+//   greet("John");
+// }
+
+// void greet(String name) {
+//   print("Hello, $name");
+// }
+
+// =================================================
+
+// 25.	Write a program in Dart that generates random password.
+
+// import 'dart:math';
+
+// void main() {
+//   int length = 8;
+//   print("Random password: ${generateRandomPassword(length)}");
+// }
+
+// String generateRandomPassword(int length) {
+//   const characters =
+//       'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#%^&*()-_=+';
+//   var random = Random();
+//   return List.generate(
+//       length, (index) => characters[random.nextInt(characters.length)]).join();
+// }
+// ====================================================================================
+
+// 26.	Write a program in Dart that find the area of a circle using function. Formula: pi * r * r
+
+// import 'dart:math';
+
+// void main() {
+//   double radius = 5.0;
+//   double area = calculateCircleArea(radius);
+//   print("Area of the circle: ${area.toStringAsFixed(2)}");
+// }
+
+// double calculateCircleArea(double radius) {
+//   return pi * radius * radius;
+// }
+
+// =====================================================================
+
+// // 27.	Write a program in Dart to reverse a String using function.
+// void main() {
+//   String name = "Muhammad Fahad";
+//   print("String is $name");
+//   print("Reserve name is ${reserveName(name)}");
+// }
+
+// String reserveName(String name) {
+//   String reservename = '';
+//   for (int i = name.length - 1; i >= 0; i--) {
+//     reservename += name[i];
+//   }
+//   return reservename;
+// }
+
+// ===================================================================
+
+// // 28.	Write a program in Dart to calculate power of a certain number. For e.g 5^3=125
+// import 'dart:math';
+
+// void main() {
+//   int base = 5;
+//   int exponent = 3;
+//   double result = calculatePower(base, exponent);
+//   print("$base^$exponent = $result");
+// }
+
+// double calculatePower(int base, int exponent) {
+//   return pow(base, exponent).toDouble();
+// }
+
+// ==================================================================
+
+// void main() {
+//   double num1 = 5;
+//   double num2 = 3;
+//   double sum = add(num1, num2);
+//   print("Sum of $num1 and $num2 is: $sum");
+// }
+
+// double add(double num1, double num2) {
+//   return num1 + num2;
+// }
+
+// ==========================================================
+// // 30.	Write a function in Dart called maxNumber that takes three numbers as arguments and returns the largest number.
+// void main() {
+//   double num1 = 5;
+//   double num2 = 10;
+//   double num3 = 7;
+//   double max = maxNumber(num1, num2, num3);
+//   print("The largest number is: $max");
+// }
+
+// double maxNumber(double num1, double num2, double num3) {
+//   double max = num1;
+//   if (num2 > max) {
+//     max = num2;
+//   }
+//   if (num3 > max) {
+//     max = num3;
+//   }
+//   return max;
+// }
+
+// ======================================================
+
+// 31.	Write a function in Dart called isEven that takes a number as an argument and returns True if the number is even, and False otherwise.
+
+// void main() {
+//   int number = 6;
+//   bool result = isEven(number);
+//   print("Is $number even? $result");
+// }
+
+// bool isEven(int number) {
+//   return number % 2 == 0;
+// }
+
+// ========================================================
+// 32.	Write a function in Dart called createUser with parameters name, age, and isActive, where isActive has a default value of true.
 void main() {
-  int no = 41;
-  for (int i = 1; i <= 100; i++) {
-    if (i != no) {
-      print("$i \t");
-    }
-  }
+  var user1 = createUser("Muuhammad Fahad", 21, true);
+  print(user1);
+
+  var user2 = createUser("Mehboob Waqar", 22);
+  print(user2);
+}
+
+String createUser(String name, int age, [bool isActive = true]) {
+  return "Name: $name, Age: $age, IsActive: $isActive";
 }
