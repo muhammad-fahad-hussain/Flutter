@@ -202,10 +202,83 @@ Write a program to calculate time taken to reach office in minutes. Formula= (di
 
 // 16.Write a dart program to print your name 100 times.
 
-void main() {
-  String name = "Muhammad Fahad";
+// void main() {
+//   String name = "Muhammad Fahad";
 
-  for (int i = 0; i < 100; i++) {
-    print("Count no ${i + 1} = $name");
+//   for (int i = 0; i < 100; i++) {
+//     print("Count no ${i + 1} = $name");
+//   }
+// }
+
+// ==========================================================================
+
+// 17.	Write a dart program to calculate the sum of natural numbers.
+// void main() {
+//   int n = 10;
+//   int sum = 0;
+//   for (int i = 1; i <= n; i++) {
+//     sum += i;
+//   }
+//   print("Sum of natural numbers up to $n: $sum");
+// }
+
+// ================================================================================
+
+// 18.	Write a dart program to generate multiplication tables of 5.
+// void main() {
+//   int number = 5;
+//   for (int i = 1; i <= 10; i++) {
+//     print("$number * $i = ${number * i}\n");
+//   }
+// }
+
+// ================================================================================
+
+// 19.	Write a dart program to generate multiplication tables of 1-9.
+// void main() {
+//   for (int i = 1; i < 10; i++) {
+//     print("Table no $i \n");
+//     print("-------------------------------------\n");
+//     for (int j = 1; j <= 10; j++) {
+//       print("$i * $j = ${j * i}\n");
+//     }
+//   }
+// }
+
+// =========================================================================
+
+//20.	Write a dart program to create a simple calculator that performs addition, subtraction, multiplication, and division.
+
+// void main() {
+//   print("Sum = ${calculator(5, 3, '+')}");
+//   print("Min = ${calculator(5, 3, '-')}");
+//   print("Mul = ${calculator(5, 3, '*')}");
+//   print("Div = ${calculator(5, 3, '/').toStringAsFixed(2)}");
+// }
+
+// double calculator(double num1, double num2, String operation) {
+//   switch (operation) {
+//     case '+':
+//       return num1 + num2;
+//     case '-':
+//       return num1 - num2;
+//     case '*':
+//       return num1 * num2;
+//     case '/':
+//       return num1 / num2;
+//     default:
+//       return 0;
+//   }
+// }
+
+// =========================================================================
+// 21.	Write a dart program to print 1 to 100 but not 41.
+
+void main() {
+  int no = 41;
+  for (int i = 1; i <= 100; i++) {
+    if (i != no) {
+      print("$i \t");
+    }
   }
 }
