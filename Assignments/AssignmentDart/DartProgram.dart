@@ -63,11 +63,149 @@ Doe” with single and double quotes.*/
 
 // 7.	Write a program to find quotient and remainder of two integers.
 
+// void main() {
+//   int num1 = 21;
+//   int num2 = 11;
+//   int quotient = num1 ~/ num2;
+//   int remainder = num1 % num2;
+//   print("Quotient= $quotient");
+//   print("Remainder= $remainder");
+// }
+
+// ===================================================================================================
+
+// 8. Write a program to swap two numbers.
+
+// void main() {
+//   int num1 = 31;
+//   int num2 = 2;
+//   print("Before Swaping");
+//   print("Number 1= $num1");
+//   print("Number 2= $num2");
+//   int temp;
+//   temp = num1;
+//   num1 = num2;
+//   num2 = temp;
+//   print("After Swaping");
+//   print("Number 1= $num1");
+//   print("Number 2= $num2");
+// }
+
+// ===================================================================================================
+
+// 9.	Write a program in Dart to remove all whitespaces from String.
+
+// void main() {
+//   String intro = "My name is Muhammad Fahad";
+//   String removeSpaceInIntro = intro.replaceAll(RegExp(r'\s+'), '');
+//   print("Before removing space = $intro");
+//   print("After removing space = $removeSpaceInIntro");
+// }
+
+// =========================================================================================================
+
+// 10.	Write a Dart program to convert String to int.
+
+// void main() {
+//   String no = "15";
+//   int noInt = int.parse(no);
+//   print("Convert String to Integer: $noInt");
+// }
+
+// ==========================================================================
+
+/*
+Suppose, you often go to restaurant with friends and you have to split amount of bill.
+ Write a program to calculate split amount of bill. Formula= (total billamount) / number of people.
+
+*/
+
+// import 'dart:io';
+
+// void main() {
+//   stdout.write("Enter Total No: ");
+//   double totalBill = double.parse(stdin.readLineSync()!);
+//   stdout.write("Enter number of people: ");
+//   int totalPeople = int.parse(stdin.readLineSync()!);
+
+//   double splitAmountOfBill = totalBill / totalPeople;
+
+//   print("Split amount of bill = ${splitAmountOfBill.toStringAsFixed(2)}");
+// }
+
+// ==========================================================================
+
+/*12.	Suppose, your distance to office from home is 25 km and you travel 40 km per hour. 
+Write a program to calculate time taken to reach office in minutes. Formula= (distance) / (speed).*/
+
+// void main() {
+//   double distanceToOffice = 25;
+//   double travelSpeed = 40;
+
+//   double timeInHours = distanceToOffice / travelSpeed;
+//   double timeInMinutes = timeInHours * 60;
+
+//   print(
+//       "Time taken to reach office: ${timeInMinutes.toStringAsFixed(2)} minutes");
+// }
+
+// ==========================================================================
+
+// 13.	Write a dart program to check if the number is odd or even.
+// void main() {
+//   int number = 5;
+//   if (number % 2 == 0) {
+//     print("$number is even.");
+//   } else {
+//     print("$number is odd.");
+//   }
+// }
+
+// ==========================================================================
+
+// 14.Write a dart program to check whether a character is a vowel or consonant.
+
+// void main() {
+//   String character = 'a';
+//   if (character == 'a' ||
+//       character == 'e' ||
+//       character == 'i' ||
+//       character == 'o' ||
+//       character == 'u' ||
+//       character == 'A' ||
+//       character == 'E' ||
+//       character == 'I' ||
+//       character == 'O' ||
+//       character == 'U') {
+//     print("$character is a vowel.");
+//   } else {
+//     print("$character is a consonant.");
+//   }
+// }
+
+// ==========================================================================
+
+// 15.	Write a dart program to check whether a number is positive, negative, or zero.
+// void main() {
+//   int number = 16;
+
+//   if (number > 0) {
+//     print("$number is positive.");
+//   } else if (number < 0) {
+//     print("$number is negative.");
+//   } else {
+//     print("$number is zero.");
+//   }
+// }
+
+// ==========================================================================
+
+// 16.Write a dart program to print your name 100 times.
+
 void main() {
-  int num1 = 21;
-  int num2 = 11;
-  int quotient = num1 ~/ num2;
-  int remainder = num1 % num2;
-  print("Quotient= $quotient");
-  print("Remainder= $remainder");
+  String name = "Muhammad Fahad";
+
+  for (int i = 0; i < 100; i++) {
+    print("Count no ${i + 1} = $name");
+  }
 }
