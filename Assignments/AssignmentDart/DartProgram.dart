@@ -598,8 +598,365 @@ Write a program to calculate time taken to reach office in minutes. Formula= (di
 //   keysWithLengthFour.forEach((key) => print(key));
 // }
 
-
-
 // ============================================================
 
 // 41.	Create a simple to-do application that allows user to add, remove, and view their task.
+// import 'dart:io';
+
+// List<String> tasks = [];
+
+// void main() {
+//   print("Select Option: ");
+//   print("1. Add a task");
+//   print("2. Remove a task");
+//   print("3. View tasks");
+//   print("4. Exit");
+
+//   int ch = int.parse(stdin.readLineSync()!);
+//   switch (ch) {
+//     case 1:
+//       addTask(tasks);
+//       break;
+//     case 2:
+//       removeTask(tasks);
+//       break;
+//     case 3:
+//       viewTasks(tasks);
+//       break;
+//     case 4:
+//       exit(0);
+//       break;
+//     default:
+//       print("Invalid option.");
+//       main();
+//   }
+// }
+
+// void addTask(List<String> tasks) {
+//   stdout.write("Enter the task to add: ");
+//   String task = stdin.readLineSync()!;
+//   tasks.add(task);
+//   print("Task added successfully!");
+//   main();
+// }
+
+// void removeTask(List<String> tasks) {
+//   if (tasks.isEmpty) {
+//     print("No tasks to remove.");
+//     main();
+//     return;
+//   }
+
+//   stdout.write("Enter the task to remove: ");
+//   String task = stdin.readLineSync()!;
+//   if (tasks.contains(task)) {
+//     tasks.remove(task);
+//     print("Task removed successfully!");
+//   } else {
+//     print("Task not found.");
+//   }
+//   main();
+// }
+
+// void viewTasks(List<String> tasks) {
+//   if (tasks.isEmpty) {
+//     print("No tasks to display.");
+//   } else {
+//     print("\nYour tasks:");
+//     for (int i = 0; i < tasks.length; i++) {
+//       print("$i. ${tasks[i]}");
+//     }
+//   }
+//   main();
+// }
+
+// ==========================================
+// 42.	Write a dart program to create a class Laptop with properties [id, name, ram] and create 3 objects of it and print all details.
+// class Laptop {
+//   int id;
+//   String name;
+//   int ram;
+
+//   Laptop(this.id, this.name, this.ram);
+
+//   void printDetails() {
+//     print("Laptop ID: $id");
+//     print("Laptop Name: $name");
+//     print("RAM: $ram GB");
+//   }
+// }
+
+// void main() {
+//   Laptop laptop1 = Laptop(1, "Acer aspire 3", 20);
+//   Laptop laptop2 = Laptop(2, "Dell 7480", 16);
+//   Laptop laptop3 = Laptop(3, "Lenovo ThinkPad", 8);
+
+//   print("Details of Laptop 1:");
+//   laptop1.printDetails();
+//   print("\nDetails of Laptop 2:");
+//   laptop2.printDetails();
+//   print("\nDetails of Laptop 3:");
+//   laptop3.printDetails();
+// }
+
+// 43.	Write a dart program to create a class House with properties [id, name, price].
+
+// class House {
+//   int id;
+//   String name;
+//   double price;
+
+//   // Constructor
+//   House(this.id, this.name, this.price);
+// }
+
+// void main() {
+//   House myHouse = House(1, "Dream House", 250000.00);
+
+//   print("House ID: ${myHouse.id}");
+//   print("House Name: ${myHouse.name}");
+//   print("House Price: \$${myHouse.price}");
+// }
+
+// 44.	Create a constructor of it and create 3 objects of it. Add them to the list and print all details.
+// class House {
+//   int id;
+//   String name;
+//   double price;
+
+//   House(this.id, this.name, this.price);
+// }
+
+// void main() {
+//   List houses = [
+//     House(1, "Dream House", 250000.00),
+//     House(2, "Beach House", 500000.00),
+//     House(3, "Mountain House", 350000.00),
+//   ];
+
+//   for (House house in houses) {
+//     print("House ID: ${house.id}");
+//     print("House Name: ${house.name}");
+//     print("House Price: ${house.price}");
+//     print("");
+//   }
+// }
+
+// 45.	Write a dart program to create an enum class for gender [male, female, others] and print all values.
+// enum Gender { male, female, others }
+
+// void main() {
+//   print("All values of Gender enum:");
+//   for (var gender in Gender.values) {
+//     print(gender);
+//   }
+// }
+
+// 46.	Write a dart program to create a class Animal with properties [id, name, color].
+// class Animal {
+//   int id;
+//   String name;
+//   String color;
+
+//   Animal(this.id, this.name, this.color);
+// }
+
+// void main() {
+//   Animal myAnimal = Animal(1, "Tiger", "Orange");
+
+//   print("Animal ID: ${myAnimal.id}");
+//   print("Animal Name: ${myAnimal.name}");
+//   print("Animal Color: ${myAnimal.color}");
+// }
+
+// 47.	Create another class called Cat and extends it from Animal. Add new properties sound in String. Create an object of a Cat and print all details.
+// class Animal {
+//   int id;
+//   String name;
+//   String color;
+
+//   Animal(this.id, this.name, this.color);
+// }
+
+// class Cat extends Animal {
+//   String sound;
+
+//   Cat(int id, String name, String color, this.sound) : super(id, name, color);
+// }
+
+// void main() {
+//   Cat myCat = Cat(1, "Whiskers", "Gray", "Meow");
+
+//   print("Cat ID: ${myCat.id}");
+//   print("Cat Name: ${myCat.name}");
+//   print("Cat Color: ${myCat.color}");
+//   print("Cat Sound: ${myCat.sound}");
+// }
+
+// 48.	Write a dart program to create a class Camera with private properties [id, brand, color, price]. Create a getter and setter to get and set values. Also, create 3 objects of it and print all details.
+
+// class Camera {
+//   int _id;
+//   String _brand;
+//   String _color;
+//   double _price;
+
+//   Camera(this._id, this._brand, this._color, this._price);
+
+//   int get id => _id;
+
+//   set id(int id) => _id = id;
+
+//   String get brand => _brand;
+
+//   set brand(String brand) => _brand = brand;
+
+//   String get color => _color;
+
+//   set color(String color) => _color = color;
+
+//   double get price => _price;
+
+//   set price(double price) => _price = price;
+// }
+
+// void main() {
+//   Camera camera1 = Camera(1, "Canon", "Black", 799.99);
+//   Camera camera2 = Camera(2, "Nikon", "Silver", 899.99);
+//   Camera camera3 = Camera(3, "Sony", "Red", 999.99);
+//   print("Details of Camera 1:");
+//   printCameraDetails(camera1);
+//   print("\nDetails of Camera 2:");
+//   printCameraDetails(camera2);
+//   print("\nDetails of Camera 3:");
+//   printCameraDetails(camera3);
+// }
+
+// void printCameraDetails(Camera camera) {
+//   print("ID: ${camera.id}");
+//   print("Brand: ${camera.brand}");
+//   print("Color: ${camera.color}");
+//   print("Price: \$${camera.price}");
+// }
+
+// 49.	Create an interface called Bottle and add a method to it called open(). Create a class called CokeBottle and implement the Bottle and print the message “Coke bottle is opened”. Add a factory constructor to Bottle and return the object of CokeBottle. Instantiate CokeBottle using the factory constructor and call the open() on the object.
+
+// abstract class Bottle {
+//   void open();
+// }
+
+// class CokeBottle implements Bottle {
+//   void open() {
+//     print("Coke bottle is opened");
+//   }
+// }
+
+// class BottleFactory {
+//   static Bottle createBottle() {
+//     return CokeBottle();
+//   }
+// }
+
+// void main() {
+//   Bottle bottle = BottleFactory.createBottle();
+
+//   bottle.open();
+// }
+
+// import 'dart:io';
+
+// class Question {
+//   String questionText;
+//   bool correctAnswer;
+
+//   Question(this.questionText, this.correctAnswer);
+// }
+
+// class Quiz {
+//   List<Question> questions;
+//   int currentQuestionIndex = 0;
+//   int score = 0;
+
+//   Quiz(this.questions);
+//   void displayQuestion() {
+//     Question currentQuestion = questions[currentQuestionIndex];
+//     print("Question: ${currentQuestion.questionText}");
+//   }
+
+//   void answerQuestion(bool userAnswer) {
+//     Question currentQuestion = questions[currentQuestionIndex];
+//     if (userAnswer == currentQuestion.correctAnswer) {
+//       print("Correct!");
+//       score++;
+//     } else {
+//       print("Incorrect!");
+//     }
+//     currentQuestionIndex++;
+//   }
+
+//   bool isQuizFinished() {
+//     return currentQuestionIndex >= questions.length;
+//   }
+
+//   void displayScore() {
+//     print("Quiz ended. Your score: $score/${questions.length}");
+//   }
+// }
+
+// void main() {
+//   List<Question> questions = [
+//     Question("Is Dart a programming language?", true),
+//     Question("Is Dart primarily used for web development?", false),
+//     Question("Is Flutter a framework for building web applications?", false),
+//     Question("Is Dart statically typed?", true),
+//   ];
+//   Quiz quiz = Quiz(questions);
+
+//   while (!quiz.isQuizFinished()) {
+//     quiz.displayQuestion();
+//     stdout.write("Your answer (true/false): ");
+//     String input = stdin.readLineSync()!;
+//     bool userAnswer = input.toLowerCase() == 'true';
+//     quiz.answerQuestion(userAnswer);
+//   }
+
+//   quiz.displayScore();
+// }
+
+// 51.	What is the purpose of the ? operator in Dart null safety?
+
+// 52.	Create a late variable named address, assign a US value to it and print it.
+// late String address;
+
+// void main() {
+//   address = 'US';
+//   print(address);
+// }
+
+// int? nullableInt;
+
+// void main() {
+//   int? age;
+//   print(age);
+// }
+
+//
+// int returnZeroIfNull(int? value) {
+//   return value ?? 0;
+// }
+
+// void main() {
+//   int? nullableValue = null;
+//   print(returnZeroIfNull(nullableValue)); // Output: 0
+// }
+
+import 'dart:math';
+
+int generateRandom() {
+  return Random().nextInt(2) == 0 ? 100 : null ?? 0;
+}
+
+void main() {
+  int status = generateRandom();
+  print('Status: $status');
+}
