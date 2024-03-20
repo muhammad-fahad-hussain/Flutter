@@ -9,10 +9,37 @@ class myButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Buttons"),
-        ),
-      ),
+          appBar: AppBar(
+            title: Text("Buttons"),
+          ),
+          // body: TextButton(
+          //     child: Text("Click Here!"),
+          //     onPressed: () {
+          //       print("Short Pressed..........");
+          //     },
+          //     onLongPress: () {
+          //       print("Long Pressed......");
+          //     }),
+          // body: ElevatedButton(
+          //     child: Text("Click Here!"),
+          //     onPressed: () {
+          //       print("Short Pressed..........");
+          //     },
+          //     onLongPress: () {
+          //       print("Long Pressed......");
+          //     })
+          //
+          body: ToggleButtons(
+            children: [
+              Text("Text 1"),
+              Text("Text 2"),
+              Text("Text 3"),
+            ],
+            isSelected: [false, false, false],
+            onPressed: (index) => {
+              print("Index"),
+            },
+          )),
     );
   }
 }
