@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.red,
         ),
         body: Center(
-          child:Container(
+          child: Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [Colors.blue, Colors.pink],
@@ -49,7 +49,6 @@ class MyApp extends StatelessWidget {
             //   // ),
             // ),
           ),
-
         ),
       ),
     );
