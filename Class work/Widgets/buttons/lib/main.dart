@@ -29,15 +29,21 @@ class myButtons extends StatelessWidget {
           //       print("Long Pressed......");
           //     })
           //
-          body: ToggleButtons(
-            children: [
-              Text("Text 1"),
-              Text("Text 2"),
-              Text("Text 3"),
-            ],
-            isSelected: [false, false, false],
-            onPressed: (index) => {
-              print("Index"),
+          // body: ToggleButtons(
+          //   children: [
+          //     Text("Text 1"),
+          //     Text("Text 2"),
+          //     Text("Text 3"),
+          //   ],
+          //   isSelected: [false, false, false],
+          //   onPressed: (index) => {
+          //     print("Index $index"),
+          //   },
+          // )
+          body: OutlinedButton(
+            child: Text("Text 1"),
+            onPressed: () => {
+              print("Index "),
             },
           )),
     );
