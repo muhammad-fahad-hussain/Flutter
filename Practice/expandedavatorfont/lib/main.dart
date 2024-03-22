@@ -77,6 +77,25 @@ class MyApp extends StatelessWidget {
                       ),
                     )
                   ],
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Row(
+                  children: [
+                    Card(
+                      shadowColor: Colors.amber,
+                      elevation: 30,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: Text(
+                          "Muhammad Fahad",
+                          style:
+                              TextStyle(fontFamily: 'MainFont', fontSize: 50),
+                        ),
+                      ),
+                    )
+                  ],
                 )
               ],
             )));
